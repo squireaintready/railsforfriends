@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
-gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
@@ -22,6 +20,12 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'sqlite3', '~> 1.4'
+end
+
+group :production do 
+  gem 'pg', '~> 1.2', '>= 1.2.3'
+  # gem 'rails_12factor', '0.0.2'
 end
 
 group :test do
